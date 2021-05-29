@@ -4,7 +4,7 @@ import Signup from "./components/signup";
 import Dashboard from './components/Dashboard'
 import Login from './components/Login'
 import { AuthProvider } from "./context/AuthProvider";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPasssword from './components/ForgotPassword'
 function App() {
