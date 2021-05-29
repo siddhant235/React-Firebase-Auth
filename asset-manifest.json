@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-Firebase-Auth/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/React-Firebase-Auth/static/js/main.3b75ac39.chunk.js",
+    "main.js.map": "/React-Firebase-Auth/static/js/main.3b75ac39.chunk.js.map",
+    "runtime-main.js": "/React-Firebase-Auth/static/js/runtime-main.dff7e6b0.js",
+    "runtime-main.js.map": "/React-Firebase-Auth/static/js/runtime-main.dff7e6b0.js.map",
+    "static/js/2.f1958b7f.chunk.js": "/React-Firebase-Auth/static/js/2.f1958b7f.chunk.js",
+    "static/js/2.f1958b7f.chunk.js.map": "/React-Firebase-Auth/static/js/2.f1958b7f.chunk.js.map",
+    "static/js/3.1a844f29.chunk.js": "/React-Firebase-Auth/static/js/3.1a844f29.chunk.js",
+    "static/js/3.1a844f29.chunk.js.map": "/React-Firebase-Auth/static/js/3.1a844f29.chunk.js.map",
+    "index.html": "/React-Firebase-Auth/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/React-Firebase-Auth/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.f1958b7f.chunk.js.LICENSE.txt": "/React-Firebase-Auth/static/js/2.f1958b7f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dff7e6b0.js",
+    "static/js/2.f1958b7f.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.3b75ac39.chunk.js"
+  ]
+}
