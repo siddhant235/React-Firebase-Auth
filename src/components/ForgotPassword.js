@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
 import { Alert } from '@material-ui/lab';
 import {useAuth} from '../context/AuthProvider'
-import {Link,useHistory} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -44,22 +44,23 @@ const useStyles = makeStyles((theme) => ({
       }
   }
 }));
-const Login=()=> {
+const ForgotPasssword=()=> {
   const classes = useStyles();
-  const history=useHistory();
   const [signupData,setSignupData]=useState({
       email:"",
       password:""
   });
-  const {login}=useAuth();
+  const {resetPassword}=useAuth();
   const [error,setError]=useState('')
+  const [message,setMessage]=useState('')
   const [loading,setLoading]=useState(false)
  const submitHandler=async (event)=>{
     event.preventDefault();
     try{
+        setMessage("")
       setLoading(true)
-    await login(signupData.email,signupData.password)
-    history.push("/")
+    await resetPassword(signupData.email)
+   setMessage("Check your inbox for further instructions")
     
     }
     catch{
@@ -80,17 +81,18 @@ const Login=()=> {
  return (
     <div >
       {error && <Alert severity="error">{error}</Alert>}
+      {message && <Alert severity="success">{message}</Alert>}
       <div className={classes.root}>
       <form className={classes.form} noValidate autoComplete="off">
-          <h2>Login</h2>
+          <h2>Reset Password</h2>
       <TextField className={classes.TextField} id="standard-basic" label="Email" onChange={handleChange('email')} value={signupData.email} />
-      <TextField className={classes.TextField} id="standard-basic" label="Passsword" onChange={handleChange('password')} value={signupData.password} />
+     
     
       <Button onClick={submitHandler} disabled={loading}  className={classes.button} variant="contained" color="primary">
-Submit
+Reset Password
 </Button>
 <br/>
-<Link to="/forgot-password">Forgot Password?</Link>
+ <h3><Link to="/login">Log In</Link></h3>
 <h3 className={classes.login}>Need  an account? <Link to="/signup">Sign Up</Link></h3>
     </form>
          
@@ -99,5 +101,5 @@ Submit
     </div>
   );
 }
-export default Login
+export default ForgotPasssword
 

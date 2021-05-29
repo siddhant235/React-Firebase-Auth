@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
     const classes = useStyles();
     const [error,setError]=useState("");
-    const {currentUser,logout}=useAuth()
+    const {currentUser,logout}=useAuth();
    const history=useHistory()
     const handleLogout=async()=>{
    setError(' ');
